@@ -1,0 +1,145 @@
+@content-border: #d8d7d8;
+
+.styleguide-clearfix {
+  zoom: 1;
+  &:before, &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+
+}
+
+#kss-nav {
+	width:20%;
+	background-color: #F7F7F7;
+  padding: 2.5em 1em 2em 1em;
+
+	nav>ul {
+		padding:0;
+    margin-top:2em;
+    margin-left: 0;
+		list-style-type:none;
+	}
+  nav li {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    &.active{
+      font-weight: 600;
+    }
+  }
+  header h1 {
+    font-size: 1.5em;
+    font-weight: 400;
+  }
+}
+
+
+#kss-main, #kss-nav {
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+#kss-main {
+	padding-left:2.5%;
+	width:77.5%;
+	left:20%;
+}
+
+.kss-mod-list {
+  width:100%;
+}
+
+.kss-mod-name {
+  text-align:right;
+  width:20%;
+  font-size:0.75em;
+}
+
+.kss-mod-example {
+  padding-bottom:20px;
+  .styleguide-clearfix();
+}
+
+.kss-markup {
+  margin-bottom:40px;
+}
+
+
+#kss-content code {
+  font-size: 0.875rem;
+  box-shadow: -5px 0 0 #e2e2e2;
+}
+
+.styleguide-color {
+  display: block;
+  height: 6em;
+  width: 8em;
+  padding: 0.5em;
+  margin-right: 1em;
+  margin-bottom: 1em;
+  float: left;
+}
+
+.styleguide-row {
+  line-height:2em;
+  margin-bottom: 0.5em;
+  border: 1px solid @content-border;
+}
+
+// ------------------------------------------------------------------------------
+//   @group Mobile/Tablet Styling
+// ------------------------------------------------------------------------------
+@media screen and (max-width: 768px) {
+  #kss-main {
+    position:static;
+    width:90%;
+    margin:0 auto;
+    padding-left:0;
+  }
+
+  #kss-nav {
+    position:static;
+    display:block;
+    width:auto;
+    margin:0;
+    background:0;
+    box-shadow:none;
+    border-bottom:1px solid #ddd;
+    nav>ul {
+      margin-top:0.5em;
+      margin-bottom:0.5em;
+
+      &>li {
+        display:inline-block;
+        padding-right:1.5em;
+      }
+    }
+  }
+
+  #kss-header>hgroup>h1 {
+    margin-top:0;
+    margin-bottom:0;
+  }
+
+  .styleguide-color {
+    margin-right: 0.5em;
+    &.dark {
+      color: white;
+    }
+    &.light {
+      color: black;
+    }
+  }
+
+}
+
+@media screen and (max-width: 640px) {
+  #kss-github {
+    display:none;
+  }
+}
+// @end

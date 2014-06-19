@@ -1,0 +1,4 @@
+node_modules
+.tmp
+origin_theme/bower_components
+.sass-cache
